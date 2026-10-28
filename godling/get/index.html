@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Get Godling</title>
+	<meta name="description" content="Get Godling for your phone.">
+	<link rel="icon" href="../../assets/img/favicon.png">
+	<link rel="stylesheet" href="../../assets/site.css">
+	<meta property="og:title" content="Get Godling">
+	<meta property="og:description" content="Raise a Blub. It becomes what you teach it.">
+	<meta property="og:image" content="https://keigames.github.io/assets/img/godling/feature_graphic.png">
+	<script>
+		// One link for every phone (postcards and shares point here): Android goes to Google Play, iPhone and
+		// iPad to the App Store, once each is out. Until then, and on computers, this page shows both.
+		var STORES = {
+			play: { live: false, url: "https://play.google.com/store/apps/details?id=com.keigames.godling" },
+			apple: { live: false, url: "" }
+		};
+		var ua = navigator.userAgent || "";
+		var ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+		var android = /Android/.test(ua);
+		if (android && STORES.play.live) location.replace(STORES.play.url);
+		else if (ios && STORES.apple.live) location.replace(STORES.apple.url);
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<header class="top">
+			<a class="brand" href="../../"><img class="pixel" src="../../assets/img/godling/app_icon.png" alt=""><span>KEI GAMES</span></a>
+			<nav><a href="../">Godling</a></nav>
+		</header>
+		<main>
+			<h1>Get Godling</h1>
+			<p class="lead">Raise a Blub. It becomes what you teach it.</p>
+			<div class="card">
+				<div class="buttons" id="stores">
+					<a class="btn" id="play" href="#">Google Play</a>
+					<a class="btn" id="apple" href="#">App Store</a>
+				</div>
+				<p class="muted" id="note"></p>
+			</div>
+			<p style="margin-top:20px"><a href="../">More about Godling</a></p>
+		</main>
+		<footer>&copy; 2026 <a href="../../">Kei Games</a> &middot; <a href="../privacy/">Privacy</a></footer>
+	</div>
+	<script>
+		// buttons for whichever stores are out; "coming soon" for the rest
+		var notes = [];
+		[["play", "Google Play"], ["apple", "the App Store"]].forEach(function (s) {
+			var a = document.getElementById(s[0]);
+			if (STORES[s[0]].live) { a.href = STORES[s[0]].url; }
+			else { a.className = "btn off"; a.textContent = a.textContent + ": soon"; notes.push(s[1]); }
+		});
+		document.getElementById("note").textContent = notes.length
+			? "Godling is in testing and coming soon to " + notes.join(", then ") + ". Want to help test? Write to godling.dev@gmail.com."
+			: "";
+	</script>
+</body>
+</html>
