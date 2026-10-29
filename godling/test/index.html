@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test Godling</title>
+	<meta name="description" content="Help test Godling on Android before it launches on Google Play. Free, and about 2 minutes to join.">
+	<link rel="icon" href="../../assets/img/favicon.png">
+	<link rel="stylesheet" href="../../assets/site.css">
+	<meta property="og:title" content="Godling needs testers!">
+	<meta property="og:description" content="Help test Godling on Android before it launches. Free, and about 2 minutes to join.">
+	<meta property="og:image" content="https://keigames.github.io/assets/img/godling/feature_graphic.png">
+	<style>
+		.steps { counter-reset: step; display: grid; gap: 16px; }
+		.step { display: flex; gap: 16px; align-items: flex-start; }
+		.step .num {
+			flex: 0 0 44px; height: 44px; display: grid; place-items: center;
+			font-family: "Silkscreen", monospace; font-weight: 700; font-size: 20px;
+			background: var(--gold); color: var(--ink); border: var(--line) solid var(--ink); border-radius: 10px;
+		}
+		.step h3 { margin-top: 8px; }
+		.step .btn { margin-top: 6px; }
+		.card ul { margin: 0; padding-left: 20px; }
+		.card li { margin-bottom: 8px; }
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="top">
+			<a class="brand" href="../../"><img class="pixel" src="../../assets/img/godling/app_icon.png" alt=""><span>KEI GAMES</span></a>
+			<nav><a href="../">Godling</a><a href="../privacy/">Privacy</a></nav>
+		</header>
+
+		<main class="doc">
+			<h1>Help test Godling</h1>
+			<p class="lead">Godling is almost ready for Google Play. Before it can launch, Google needs a group of real players to try it for two weeks. It's free, and joining takes about two minutes.</p>
+			<p><span class="badge">Android only, for now</span></p>
+
+			<div class="steps">
+				<div class="card step">
+					<span class="num">1</span>
+					<div>
+						<h3>Join the tester group</h3>
+						<p class="muted">Use the same Google account as the Play Store on your phone. Tap "Join group". Nobody sees your email but us.</p>
+						<a class="btn" href="https://groups.google.com/g/godling-testers">Join the group</a>
+					</div>
+				</div>
+				<div class="card step">
+					<span class="num">2</span>
+					<div>
+						<h3>Become a tester</h3>
+						<p class="muted">Open this on your Android phone and tap "Become a tester". If it says the test isn't available yet, Google is still reviewing it: try again in a day or two.</p>
+						<a class="btn" href="https://play.google.com/apps/testing/com.keigames.godling">Become a tester</a>
+					</div>
+				</div>
+				<div class="card step">
+					<span class="num">3</span>
+					<div>
+						<h3>Install and play</h3>
+						<p class="muted">Then grab it from the Play Store like any other app. Updates arrive on their own.</p>
+						<a class="btn quiet" href="https://play.google.com/store/apps/details?id=com.keigames.godling">Open in Play Store</a>
+					</div>
+				</div>
+			</div>
+
+			<h2>Good to know</h2>
+			<div class="card">
+				<ul>
+					<li><strong>Keep it installed for at least two weeks</strong> and open it now and then. Google counts testers day by day, and the launch depends on it.</li>
+					<li><strong>The whole game is free for testers</strong> if we've sent you a code. Otherwise the free part is yours to play as long as you like.</li>
+					<li><strong>Tell us everything:</strong> bugs, confusing bits, and the parts you love. Email <a href="mailto:godling.dev@gmail.com" style="color:var(--ink)">godling.dev@gmail.com</a>.</li>
+					<li><strong>On iPhone?</strong> An iPhone test is coming later. We'll let the group know.</li>
+					<li>Godling has no ads and collects no personal data. <a href="../privacy/" style="color:var(--ink)">Privacy policy</a>.</li>
+				</ul>
+			</div>
+		</main>
+
+		<footer>
+			&copy; 2026 <a href="../../">Kei Games</a> &middot; <a href="../privacy/">Privacy</a> &middot; <a href="mailto:godling.dev@gmail.com">godling.dev@gmail.com</a>
+		</footer>
+	</div>
+</body>
+</html>
