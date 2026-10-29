@@ -39,6 +39,7 @@
 					<a class="btn" id="apple" href="#">App Store</a>
 				</div>
 				<p class="muted" id="note"></p>
+				<p id="test-link"><a class="btn" href="../test/">Help test it on Android</a></p>
 			</div>
 			<p style="margin-top:20px"><a href="../">More about Godling</a></p>
 		</main>
@@ -52,8 +53,9 @@
 			if (STORES[s[0]].live) { a.href = STORES[s[0]].url; }
 			else { a.className = "btn off"; a.textContent = a.textContent + ": soon"; notes.push(s[1]); }
 		});
+		if (STORES.play.live) document.getElementById("test-link").style.display = "none";  // the test link is for before launch
 		document.getElementById("note").textContent = notes.length
-			? "Godling is in testing and coming soon to " + notes.join(", then ") + ". Want to help test? Write to godling.dev@gmail.com."
+			? "Godling is in testing and coming soon to " + notes.join(", then ") + "."
 			: "";
 	</script>
 </body>
